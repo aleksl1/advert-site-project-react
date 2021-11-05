@@ -1,0 +1,33 @@
+.top-bar-menu {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  background-color: bisque;
+  width: 100%;
+  padding: 10px;
+  border-bottom: solid 2px $Gray5;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+  }
+  &__item {
+    flex-basis: 25%;
+    align-self: center;
+    border-right: solid 1px $Gray4;
+  }
+  &__item:nth-last-child(1) {
+    border-right: none;
+  }
+  &__link {
+    height: 80%;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

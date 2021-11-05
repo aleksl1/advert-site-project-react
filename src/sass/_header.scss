@@ -1,0 +1,14 @@
+.top-bar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  background-color: aqua;
+  &__logo {
+    background-color: blue;
+  }
+  &__name {
+    color: red;
+  }
+}
