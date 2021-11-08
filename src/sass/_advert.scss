@@ -1,0 +1,29 @@
+.advert {
+  padding-bottom: 10px;
+  border-bottom: 2px solid $Gray4;
+  &__link {
+    text-decoration: none;
+    color: black;
+  }
+  &__title {
+    font-size: 18px;
+    padding-top: 5px;
+    letter-spacing: 2px;
+  }
+  &__text {
+    text-align: justify;
+    padding: 5px 0;
+  }
+  &__tags {
+    a {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 2px;
+      color: white;
+      font-size: 14px;
+      border-radius: 15%;
+      background-color: $Gray4;
+      text-decoration: none;
+    }
+  }
+}

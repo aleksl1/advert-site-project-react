@@ -2,13 +2,12 @@
   position: fixed;
   top: 40px;
   left: 0;
-  background-color: bisque;
   width: 100%;
-  padding: 10px;
   border-bottom: solid 2px $Gray5;
-
+  background-color: $Gray1;
   &__list {
     display: flex;
+    height: 40px;
     align-items: center;
     text-align: center;
     list-style: none;
@@ -23,7 +22,10 @@
   }
   &__link {
     height: 80%;
+    font-size: 15px;
+    font-family: $logoFont;
     color: black;
+
     text-transform: uppercase;
     text-decoration: none;
     &:hover {

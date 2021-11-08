@@ -1,14 +1,22 @@
 .top-bar {
+  display: flex;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   height: 40px;
-  background-color: aqua;
+  background-color: $Gray1;
+
   &__logo {
-    background-color: blue;
+    flex-basis: 30%;
+    line-height: 40px;
+    margin-left: 10px;
   }
   &__name {
-    color: red;
+    flex-basis: 70%;
+    font-family: $logoFont;
+    font-size: 20px;
+    line-height: 40px;
+    text-transform: uppercase;
   }
 }

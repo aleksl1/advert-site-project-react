@@ -1,6 +1,7 @@
 @import "./variables";
 @import "./header";
 @import "./navigation";
+@import "./advert";
 
 * {
   margin: 0;
@@ -9,15 +10,13 @@
 .wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   position: relative;
   background-image: url("../images/bg_vertical.jpg");
   min-height: 222vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: $contentFont;
   @media (min-width: 1023px) {
     background-image: url("../images/bg_horizontal.jpg");
   }
