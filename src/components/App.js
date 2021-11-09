@@ -18,7 +18,7 @@ function App() {
       <Header />
       <Navigation />
       <Routes>
-        <Route path="/home" element={<HomePage adverts={adverts} />} />
+        <Route path="/" element={<HomePage adverts={adverts} />} />
         <Route path="/add" element={<AddPage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/user" element={<UserPanelPage />} />

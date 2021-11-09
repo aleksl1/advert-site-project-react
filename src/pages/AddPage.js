@@ -1,5 +1,7 @@
+import AdvertForm from "../components/AdvertForm";
+
 const AddPage = () => {
-  return <p>Add advert on this page</p>;
+  return <AdvertForm />;
 };
 
 export default AddPage;

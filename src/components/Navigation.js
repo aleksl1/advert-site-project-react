@@ -2,7 +2,7 @@ import NavigationItems from "./NavigationItems";
 
 const Navigation = () => {
   const menuItems = [
-    { name: "Oglądaj", path: "/home" },
+    { name: "Oglądaj", path: "/" },
     { name: "Dodaj", path: "/add" },
     { name: "Wyszukaj", path: "/search" },
     { name: "Profil", path: "/user" },
