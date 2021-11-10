@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SubCategory = ({ selected, data }) => {
+const SubCategory = ({ selected, data, getSubCategory }) => {
   const [subCategoryName, setSubCategoryName] = useState("");
 
   const handleChange = (e) => {
@@ -9,8 +9,9 @@ const SubCategory = ({ selected, data }) => {
     });
   };
 
-  const def = data.find((item) => item.id === selected.id);
-  console.log(def);
+  const selectOptions = data.filter(
+    (item) => item.id === selected.selectedValue
+  )[0].subCategories;
 
   const subOptions = (
     <label className="form-add__sub-category-label">
@@ -20,19 +21,21 @@ const SubCategory = ({ selected, data }) => {
         name="sub-category"
         className="form-add__sub-category"
       >
-        {/* <option key={category.id} value={category.id}>
-            {category.name}
-          </option> */}
+        {selectOptions.map((option, index) => {
+          return (
+            <option
+              key={index + 1}
+              value={`${selected.selectedValue}${index + 1}`}
+            >
+              {option}
+            </option>
+          );
+        })}
       </select>
     </label>
   );
 
-  return (
-    <>
-      {console.log(subCategoryName)}
-      {subOptions}
-    </>
-  );
+  return <>{subOptions}</>;
 };
 
 export default SubCategory;

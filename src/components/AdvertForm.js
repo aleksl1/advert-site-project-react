@@ -1,11 +1,16 @@
 import Category from "./FormComponents/Category";
 
+import { useState } from "react";
+
 const AdvertForm = () => {
+  const [category, setCategory] = useState();
+  const [subCategory, setSubCategory] = useState();
+
   const mainCategories = [
     {
       id: "default",
-      name: "default",
-      subCategories: ["default"],
+      name: "",
+      subCategories: [""],
     },
     {
       id: "Cars",
@@ -24,10 +29,26 @@ const AdvertForm = () => {
     },
   ];
 
+  // function getFormData(category, subcategory) {
+  //   console.log(`getting data`);
+  //   setCategory({
+  //     category,
+  //   });
+  //   setSubCategory({
+  //     subCategory,
+  //   });
+  // }
+
   return (
     <div className="form-wrapper">
       <form action="" className="form-add">
         <Category categories={mainCategories} />
+        <input
+          name="submit-btn"
+          type="submit"
+          className="form-add__button"
+          value="Dodaj ogłoszenie"
+        />
         {/* <Category categories={subCategories} /> */}
 
         {/* <label for="" class="form-add__title-label">
