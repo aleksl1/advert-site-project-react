@@ -27,7 +27,11 @@
 
 .advert__tags a { display: inline-block; margin-right: 10px; padding: 2px; color: white; font-size: 14px; border-radius: 15%; background-color: #737373; text-decoration: none; }
 
-.form-wrapper { margin: 100px auto 0; }
+.form-wrapper { margin: 100px auto 0; max-width: 1024px; }
+
+.form-wrapper .form-add { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+.form-wrapper .form-add label { -ms-flex-preferred-size: 100%; flex-basis: 100%; }
 
 * { margin: 0; padding: 0; }
 

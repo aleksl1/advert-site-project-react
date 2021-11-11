@@ -1,3 +1,13 @@
 .form-wrapper {
   margin: 100px auto 0;
+  max-width: 1024px;
+
+  .form-add {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    label {
+      flex-basis: 100%;
+    }
+  }
 }

@@ -1,4 +1,6 @@
 import Category from "./FormComponents/Category";
+import InputComponent from "./FormComponents/InputComponent";
+import SelectComponent from "./FormComponents/SelectComponent";
 
 import { useState } from "react";
 
@@ -29,6 +31,10 @@ const AdvertForm = () => {
     },
   ];
 
+  const handleSubmitAdvertForm = (e) => {
+    e.preventDefault();
+  };
+
   // function getFormData(category, subcategory) {
   //   console.log(`getting data`);
   //   setCategory({
@@ -39,54 +45,38 @@ const AdvertForm = () => {
   //   });
   // }
 
+  const handleInputChange = (e) => {
+    console.log(e.target.value);
+  };
+  const handleSelectChange = (e) => {
+    console.log(e.target.value);
+  };
+
+  // const getSelectedCategory = (e) => {
+  //   return e.target.value;
+  // };
+
   return (
     <div className="form-wrapper">
-      <form action="" className="form-add">
-        <Category categories={mainCategories} />
+      <form
+        onSubmit={handleSubmitAdvertForm}
+        action="submit"
+        className="form-add"
+      >
+        {/* <Category categories={mainCategories} /> */}
+        <SelectComponent
+          mainCategories={mainCategories}
+          handleSelectChange={handleSelectChange}
+          // getSelectedCategory={getSelectedCategory}
+        />
+        <InputComponent handleInputChange={handleInputChange} />
+
         <input
           name="submit-btn"
           type="submit"
           className="form-add__button"
           value="Dodaj ogłoszenie"
         />
-        {/* <Category categories={subCategories} /> */}
-
-        {/* <label for="" class="form-add__title-label">
-          Tytuł Twojego ogłoszenia
-        </label>
-        <input name="title" type="text" class="form-add__title" required />
-
-        <label for="" class="form-add__image-local-label">
-          Dodaj url zdjęcia
-        </label>
-        <input name="image" type="url" class="form-add__image" />
-
-        <label for="" class="form-add__advert-label">
-          Ogłoszenie{" "}
-        </label>
-        <textarea
-          name="advert"
-          class="form-add_advert"
-          id=""
-          cols="30"
-          rows="10"
-        ></textarea>
-
-        <label for="" class="form-add__price-label">
-          Podaj cenę{" "}
-        </label>
-        <input name="price" type="text" class="form-add__price" />
-
-        <label for="" class="form-add__phone-label">
-          Wpisz numer telefonu do kontaktu
-        </label>
-        <input name="phone" type="tel" class="form-add__phone" />
-        <input
-          name="submit-btn"
-          type="submit"
-          class="form-add__button"
-          value="Dodaj ogłoszenie"
-        /> */}
       </form>
     </div>
   );
