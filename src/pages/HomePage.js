@@ -4,14 +4,14 @@ const HomePage = ({ adverts }) => {
   const containerStyles = {
     margin: "100px 20px 20px",
   };
-
+  console.log("homepage", adverts);
   const pageContent = adverts.map((advert, index) => (
-    <Advert id={advert} key={index} />
+    <Advert advert={advert} key={index} />
   ));
 
   return (
     <div className="adverts-container" style={containerStyles}>
-      {pageContent}
+      {adverts.length > 0 ? pageContent : null}
     </div>
   );
 };

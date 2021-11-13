@@ -42,18 +42,18 @@ const SelectComponent = ({ mainCategories, handleSelectChange }) => {
       </select>
     </label>
   );
-  const options = () => {
+  const subOptions = () => {
     const temp = [];
     mainCategories.forEach((item) => temp.push(item.id));
     return temp;
   };
-  const optionsTable = options();
+  const subOptionsTable = subOptions();
 
   const getSubCategories = () => {
     if (typeof selectedCategory.selectedCategory === "undefined") {
-      return console.log(`wybierz`);
+      return;
     } else {
-      const selectedCategoryIndex = optionsTable.indexOf(
+      const selectedCategoryIndex = subOptionsTable.indexOf(
         selectedCategory.selectedCategory
       );
 
@@ -64,6 +64,7 @@ const SelectComponent = ({ mainCategories, handleSelectChange }) => {
   };
 
   let displaySubOptions;
+
   const current = getSubCategories();
   if (typeof current === "undefined") {
     displaySubOptions = "";
@@ -94,7 +95,7 @@ const SelectComponent = ({ mainCategories, handleSelectChange }) => {
     <>
       {displayMainCategory}
 
-      {displaySubCategory}
+      {selectedCategory ? displaySubCategory : null}
     </>
   );
 };
